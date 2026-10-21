@@ -8,6 +8,8 @@ License for the audio: CC0 1.0. Author: ソナ / VERDANT//ZERO team.
 | bgm_arena_loop.ogg / bgm_arena_loop.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | bgm_battle.ogg / bgm_battle.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | bgm_boss.ogg / bgm_boss.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
+| bgm_boss_jin.ogg / bgm_boss_jin.mp3 | self-synthesized（bgm_boss の編曲） | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
+| bgm_boss_jin_end.ogg / bgm_boss_jin_end.mp3 | self-synthesized（止めの音） | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | bgm_depth01_surface.ogg / bgm_depth01_surface.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | bgm_depth02_coral_shallows.ogg / bgm_depth02_coral_shallows.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | bgm_depth03_twilight.ogg / bgm_depth03_twilight.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |

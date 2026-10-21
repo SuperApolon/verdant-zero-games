@@ -20,6 +20,12 @@
   ],
   "fake": [
    "art-in/fake_luka.png"
+  ],
+  "kaito": [
+   "art-in/kaito.png"
+  ],
+  "minamo": [
+   "art-in/minamo.png"
   ]
  },
  "harpoons": {
@@ -146,6 +152,16 @@
   "se_hover": [
    "audio-in/se_ui_hover.ogg",
    "audio-in/se_ui_hover.mp3"
+  ],
+  "boss_jin": [
+   "audio-in/bgm_boss_jin.ogg",
+   "audio-in/bgm_boss_jin.mp3",
+   "audio-in/bgm_boss.ogg",
+   "audio-in/bgm_boss.mp3"
+  ],
+  "boss_jin_end": [
+   "audio-in/bgm_boss_jin_end.ogg",
+   "audio-in/bgm_boss_jin_end.mp3"
   ]
  },
  "depthBgm": [
@@ -187,6 +203,9 @@
   "hikui": [
    "art-in/enemy_hikui.png",
    "art-in/enemy_hikui.webp"
+  ],
+  "jinchar": [
+   "art-in/jin.png"
   ]
  }
 }

@@ -439,7 +439,7 @@ const VZ_CONFIG={
   kagerou:{cost:2, unlockEpisode:5, decoyMax:3, operators:3},
 
  },
- chapters:{act1:[0,12],act2:[13,20],act3:[21,35],finale:[36,36]},
+ chapters:{act1:[0,12],act2:[13,20],act3:[21,35],lastact:[36,36]},
  _end:{ },
 
  masks:{ fakeLine:{episode:12, src:'unlock-texts.json'} },
@@ -462,6 +462,8 @@ const FINAL_EPISODE=null;
 
 const PUBLISHED={ep:12,eps:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]};
 function publishedEp(){return PUBLISHED.ep;}
+const CHAPTER_PUB={ep:20};
+function chapterEp(){return Math.max(CHAPTER_PUB.ep,PUBLISHED.ep);}
 
 function vzInterp(tbl,x){const ks=Object.keys(tbl).map(Number).sort((a,b)=>a-b);if(x<=ks[0])return tbl[ks[0]];if(x>=ks[ks.length-1])return tbl[ks[ks.length-1]];
  for(let i=0;i<ks.length-1;i++){const a=ks[i],b=ks[i+1];if(x>=a&&x<=b)return tbl[a]+(tbl[b]-tbl[a])*(x-a)/(b-a);}return tbl[ks[0]];}
@@ -1358,12 +1360,12 @@ $('btnCopy').onclick=()=>{const w=G.wave,d=depthOf(w);const txt=`VERDANT//ZERO �
 function fallbackCopy(t,cb){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}ta.remove();cb();}
 document.addEventListener('keydown',e=>{if(e.code==='Space'&&G.phase==='plan'&&!modalOpen()){e.preventDefault();startBattle();}});
 function buildTitleLink(){const sh=readShared();const parts=[];
- {const pubE=new Set((PUBLISHED.eps||[]).map(Number));const rd=new Set(sh.readEpisodes.map(x=>parseInt(String(x).replace(/\D/g,''),10)).filter(n=>pubE.has(n)));if(rd.size)parts.push(`RPGで読んだ話 ${rd.size}話`);}
- const CH={act1:'第一幕',act2:'第二幕',act3:'第三幕'};const ch=sh.clearedChapters.filter(c=>CH[c]&&VZ_CONFIG.chapters[c]&&VZ_CONFIG.chapters[c][1]<=publishedEp()).map(c=>CH[c]);
+ {const pubE=new Set(Array.from({length:chapterEp()+1},(_,i)=>i));const rd=new Set(sh.readEpisodes.map(x=>parseInt(String(x).replace(/\D/g,''),10)).filter(n=>pubE.has(n)));if(rd.size)parts.push(`RPGで読んだ話 ${rd.size}話`);}
+ const CH={act1:'第一幕',act2:'第二幕',act3:'第三幕'};const ch=sh.clearedChapters.filter(c=>CH[c]&&VZ_CONFIG.chapters[c]&&VZ_CONFIG.chapters[c][1]<=chapterEp()).map(c=>CH[c]);
  if(ch.length)parts.push('クリアした章 '+ch.join('・'));
  const un=[...new Set(sh.unlockedUnits)].filter(k=>U[k]&&PLAYABLE_ALL.includes(k)&&isUnlocked(k)&&!U[k].sealed).map(k=>U[k].cn);
  if(un.length)parts.push('RPGで解放した駒 '+un.join('・'));
- const perks=[];if(sh.clearedChapters.includes('act1')&&publishedEp()>=VZ_CONFIG.chapters.act1[1])perks.push('泡貨+3');const locked=PLAYABLE_ALL.filter(k=>!isUnlocked(k)).length;
+ const perks=[];if(sh.clearedChapters.includes('act1')&&chapterEp()>=VZ_CONFIG.chapters.act1[1])perks.push('泡貨+3');const locked=PLAYABLE_ALL.filter(k=>!isUnlocked(k)).length;
  $('tLink').innerHTML=(parts.length?'🔗 RPGとの共有：'+parts.join('／'):'🔗 RPGの記録はまだありません（RPGで読んだ話・解放した駒がここに出ます）')+(perks.length?'　→ 特典 <b>'+perks.join('・')+'</b>':'')+(META.arenaWins?`　闘技場勝利数 ${META.arenaWins}`:'')+(locked?`　🔒 未解放の駒 ${locked}`:'');}
 (function buildTitle(){
  const grp=[['front','前衛',['chitose','luka','uta']],['back','後衛',['noa','__sealed']],['flank','裏周り',['kagerou']],['boss','深海の主',['angler','fake','__x1','__x2']]];
