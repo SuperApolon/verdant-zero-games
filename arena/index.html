@@ -480,7 +480,7 @@ function harpoonOf(lv){const n=lukaNovelLv(lv);let h=VZ_CONFIG.luka.harpoon[0];f
 
 const JOBS={
  knight:{name:'潜騎士',icon:'job1',col:'#9fb4ff',th:[2,4],d:['潜騎士に泡殻シールド(最大HP30％)','全味方にシールド15％、潜騎士は50％']},
- harpoon:{name:'銛撃士',icon:'job2',col:'#7fe9ff',th:[2,4,6],d:['銛撃士ATK+15％・銛の貫通ダメージ100％','（防御の式がないため効果なし・要再設計）','3撃ごとに必ずクリティカル']},
+ harpoon:{name:'銛撃士',icon:'job2',col:'#7fe9ff',th:[2,4,6],d:['銛撃士ATK+15％・銛の貫通ダメージ100％','（この段階の効果は調整中）','3撃ごとに必ずクリティカル']},
  lantern:{name:'灯守',icon:'job3',col:'#ffd27a',th:[2,4],d:['回復量+30％','「泡の祈り」：最初の破泡か瀕死で全員HP35％回復＋ATK+25％']},
  sango:{name:'？？？',icon:'job4',col:'#3FE8C0',th:[2,4],d:['範囲ダメージ100％','撃破地点に珊瑚が咲き周囲の味方を8％回復、？？？ATK+20％']},
  shio:{name:'歌潮士',icon:'job5',col:'#9ff0ff',th:[2,4],d:['全味方 攻撃速度+15％','攻撃速度+35％・毎秒HP1％回復']},
@@ -498,7 +498,7 @@ const FACS={
 const U={
  chitose:{name:'潜騎士',cn:'千歳',role:'front',kind:'tank',job:'knight',fac:['ama','tokai'],cost:3,hp:9999,atk:60,armor:0,aspd:1.15,range:1,move:.5,frg:0,noItem:true,fixedLv:99,
   q:'「海はね、深いほど静かで、静かなほど光るんだよ」',fl:'74歳の現役海女・Lv99の潜騎士。現実でも素潜りで20mまで潜る。',desc:'挑発に加え<b>水圧分担</b>の輪：隣接する味方の被ダメージ-20％。',s3:'輪を広げる：水圧分担-35％'},
- luka:{name:'銛撃士',cn:'汐見ルカ',role:'front',kind:'melee',job:'harpoon',fac:['tokai'],cost:1,hp:120,atk:15,armor:0,aspd:.9,range:1,move:.42,frg:10,
+ luka:{name:'銛撃士',cn:'？？？',role:'front',kind:'melee',job:'harpoon',fac:['tokai'],cost:1,hp:120,atk:15,armor:0,aspd:.9,range:1,move:.42,frg:10,
   q:'「数字は嘘をつかない」',fl:'表示名「？？？」。名前の欄が空白の銛撃士。銛はLvに合わせて 金 → 硝子 → 灯会の灰色 に替わる。',desc:'近接。銛が後ろ2マスまで貫通(50％)。HP・ダメージは固定。',s3:'★3：灯会の銛を研ぎ澄ます（ATK+20％）'},
  uta:{name:'歌潮士',cn:'ウタ',role:'front',kind:'buff',job:'shio',fac:['shinmin'],cost:1,hp:5400,atk:300,armor:0,aspd:1.1,range:1,move:.5,frg:15,
   q:'「弾けるから、美しいんだよ」',q2:'「わたしも、いつか弾ける泡だよ」',fl:'クラゲのように透きとおった深民。旧呼称は案内役#07。歌潮士 Lv1。',desc:'<b>潮の歌</b>：隣接する味方の SPD+8％。',s3:'うたかたの歌：範囲2マス'},
