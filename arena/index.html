@@ -462,7 +462,7 @@ const FINAL_EPISODE=null;
 
 const PUBLISHED={ep:12,eps:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]};
 function publishedEp(){return PUBLISHED.ep;}
-const CHAPTER_PUB={ep:20};
+const CHAPTER_PUB={ep:26};
 function chapterEp(){return Math.max(CHAPTER_PUB.ep,PUBLISHED.ep);}
 
 function vzInterp(tbl,x){const ks=Object.keys(tbl).map(Number).sort((a,b)=>a-b);if(x<=ks[0])return tbl[ks[0]];if(x>=ks[ks.length-1])return tbl[ks[ks.length-1]];
