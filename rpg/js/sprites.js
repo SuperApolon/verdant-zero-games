@@ -1,0 +1,23 @@
+(function(root){const AMBER=()=>root.VZ.NUMBERS.flame.default;const defs=(id,c1,c2)=>`<defs><radialGradient id="${id}" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="${c1}" stop-opacity=".95"/><stop offset=".6" stop-color="${c2}" stop-opacity=".45"/><stop offset="1" stop-color="${c2}" stop-opacity="0"/></radialGradient>
+    <filter id="${id}g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>`;const grid='<g stroke="#bfefff" stroke-opacity=".18" stroke-width=".6"><path d="M20 40 L180 160 M40 170 L170 30 M10 100 H190"/></g>';const S={jelly:()=>`${defs("j","#e8ffff","#59c9e8")}${grid}<g filter="url(#jg)" class="bob">
+      <path d="M50 95 Q50 40 100 38 Q150 40 150 95 Q125 85 100 95 Q75 85 50 95Z" fill="url(#j)" stroke="#dffaff" stroke-width="1.5"/>
+      ${[62,78,94,110,126,140].map((x,i)=>`<path d="M${x} 92 q${i%2?8:-8} 25 0 45 q${i%2?-8:8} 18 0 35" fill="none" stroke="#bfefff" stroke-opacity=".6" stroke-width="1.6"/>`).join("")}
+      <circle cx="100" cy="68" r="11" fill="#fff" opacity=".85"><animate attributeName="opacity" values=".4;.95;.4" dur="1.4s" repeatCount="indefinite"/></circle></g>`,goby:()=>`${defs("g","#fff6d0","#5fe0c8")}${grid}<g filter="url(#gg)">
+      <path d="M40 100 Q80 60 135 88 L165 70 L160 100 L165 130 L135 112 Q80 140 40 100Z" fill="url(#g)" stroke="#e8fff8" stroke-width="1.5"/>
+      <circle cx="62" cy="96" r="5" fill="#0a1630"/><circle cx="60" cy="94" r="1.6" fill="#fff"/>
+      ${[80,96,112].map(x=>`<circle cx="${x}" cy="${104-(x-80)/8}" r="2.4" fill="${AMBER()}" opacity=".9"/>`).join("")}</g>`,fugu:()=>`${defs("f","#fff2c8","#7fb8d8")}${grid}<g filter="url(#fg)">
+      ${Array.from({length:22},(_,i)=>{const a=i/22*Math.PI*2,r1=52,r2=74;return`<path d="M${100+Math.cos(a-.08)*r1} ${100+Math.sin(a-.08)*r1} L${100+Math.cos(a)*r2} ${100+Math.sin(a)*r2} L${100+Math.cos(a+.08)*r1} ${100+Math.sin(a+.08)*r1}Z" fill="#dff6ff" opacity=".8"/>`}).join("")}
+      <circle cx="100" cy="100" r="56" fill="url(#f)" stroke="#eaffff" stroke-width="1.5"/><circle cx="80" cy="90" r="7" fill="#0a1630"/><circle cx="78" cy="88" r="2" fill="#fff"/>
+      <path d="M70 118 Q80 124 90 118" stroke="#0a1630" stroke-width="2" fill="none"/></g>`,hikui:()=>`${defs("h","#3c4f78","#060d1e")}<defs><linearGradient id="hb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fb8d8" stop-opacity=".0"/><stop offset="1" stop-color="#ffb547" stop-opacity=".22"/></linearGradient></defs>
+      <g class="hikui">
+      <path d="M150 104 Q178 80 196 70 Q188 104 196 138 Q178 128 150 112Z" fill="#1d2a48" stroke="#8fb6c8" stroke-opacity=".5"/>
+      <path d="M70 62 Q90 40 112 46 Q100 54 96 64Z M96 58 Q118 36 140 50 Q124 56 120 68Z" fill="#1d2a48" stroke="#8fb6c8" stroke-opacity=".4"/>
+      <path d="M8 112 Q22 56 100 56 Q156 58 160 108 Q156 152 100 160 Q30 164 8 112Z" fill="url(#h)" stroke="#9fd0e8" stroke-opacity=".55" stroke-width="1.5"/>
+      <path d="M20 128 Q70 160 140 130 Q120 158 70 158 Q36 154 20 128Z" fill="url(#hb)"/>
+      <path d="M12 112 Q40 128 78 124" fill="none" stroke="#0a1630" stroke-width="5"/>
+      <path d="M14 108 L22 120 L30 106 L38 122 L46 107 L54 123 L62 108 L70 122 L78 110" fill="none" stroke="#eafcff" stroke-width="2.2" stroke-linejoin="round"/>
+      <circle cx="44" cy="88" r="8" fill="#0a1630" stroke="${AMBER()}" stroke-width="2"/><circle cx="46" cy="86" r="2.5" fill="${AMBER()}"/>
+      ${[[110,96],[124,112],[104,128],[132,92],[92,110]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="2" fill="#bfefff" opacity=".55"/>`).join("")}
+      <path d="M70 58 Q66 18 104 10" fill="none" stroke="#8fb6c8" stroke-width="2.2"/>
+      <g class="lure" filter="url(#hg)"><circle cx="106" cy="10" r="10" fill="${AMBER()}"/><circle cx="106" cy="10" r="24" fill="${AMBER()}" opacity=".2"/><circle cx="103" cy="7" r="3" fill="#fff6d8"/></g>
+      ${grid}</g>`};const MAP={jelly:"jelly",goby:"goby",fugu:"fugu",hikui1:"hikui",hikui2:"hikui"};root.VZ.Sprites={svg:id=>S[MAP[id]]?`<svg viewBox="0 0 200 200" class="esvg" data-sprite="${MAP[id]}">${S[MAP[id]]()}</svg>`:""}})(window);

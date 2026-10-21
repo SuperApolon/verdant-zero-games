@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VERDANT//ZERO</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="sea"></canvas>
+<div id="app">
+  <button id="muteBtn" type="button" aria-label="音を消す" aria-pressed="false" title="音を消す（M）">♪</button>
+    <section id="title" class="screen active">
+    <div class="logo"><span class="v">VERDANT</span><span class="sl">//</span><span class="z">ZERO</span></div>
+    <p class="sub">深度表示が、嘘をついていた。</p>
+    <nav class="menu">
+      <button data-act="new">はじめから潜る</button>
+      <button data-act="continue" id="btnContinue">つづきから</button>
+      <button data-act="chapters">章をえらぶ</button>
+      <button data-act="config">設定</button>
+    </nav>
+    <footer class="title-foot">
+      <p class="team">ORRERY QUBIT</p>
+      <p class="ai-note" id="aiNote">本作の制作には生成AIを使用しています。</p>
+      <p class="hint">クリック / Enter / Space で進む</p>
+    </footer>
+  </section>
+    <section id="story" class="screen">
+    <header id="hud">
+      <div class="ep" id="hudEp"></div>
+      <div class="depth" id="hudDepth"></div>
+      <div class="me"><span class="nm" id="hudName">？？？</span> <span id="hudLv"></span> <span id="hudJob"></span>
+        <span class="hp" id="hudHp"></span> <span id="hudPrs"></span> <span id="hudFrg"></span>
+        <span class="harp" id="hudHarp" title="銛"></span></div>
+      <div class="party" id="hudParty"></div>
+    </header>
+    <div id="stage"><img id="portrait" alt=""><div id="ptName"></div></div>
+    <div id="textbox"><div id="text"></div><div id="next">▼</div></div>
+    <nav id="sysbar"><button data-act="auto">オート</button><button data-act="log">ログ</button><button data-act="save">セーブ</button><button data-act="load">ロード</button><button data-act="config">設定</button><button data-act="totitle">タイトル</button></nav>
+  </section>
+    <section id="battle" class="screen">
+    <div id="bTop"><div id="eName"></div><div id="eBar"><i></i></div><div id="eHp"></div><div id="bInfo"></div></div>
+    <div id="bField"><div id="enemySprite"></div><div id="pops"></div><div id="meSprite"></div></div>
+    <div id="bBottom">
+      <div id="pStat"></div>
+      <div id="cmds"><button data-cmd="attack">突く</button><button data-cmd="combo">連撃</button><button data-cmd="guard">構える</button>
+        <button data-cmd="shift" class="opt">拍をずらす</button><button data-cmd="link" class="opt">連携技</button></div>
+      <div id="blog"></div>
+    </div>
+  </section>
+    <div id="modal" class="hidden"><div class="panel"><div id="mBody"></div><button id="mClose">閉じる</button></div></div>
+</div>
+<script src="data/numbers.js"></script>
+<script src="assets/manifest.js"></script>
+<script src="assets/audio_meta.js"></script>
+<script src="data/scenario.js"></script>
+<script src="data/events.js"></script>
+<script src="data/battles.js"></script>
+<script src="js/format.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/state.js"></script>
+<script src="js/battle.js"></script>
+<script src="js/assets.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/sea.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
