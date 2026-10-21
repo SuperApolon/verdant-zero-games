@@ -15,6 +15,8 @@ License for the audio: CC0 1.0. Author: ソナ / VERDANT//ZERO team.
 | bgm_depth05_abyss.ogg / bgm_depth05_abyss.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | se_attack_magic.ogg / se_attack_magic.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | se_attack_slash.ogg / se_attack_slash.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
+| se_beat.ogg / se_beat.mp3 | self-synthesized（拍の効果音・1〜3拍目） | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
+| se_beat_accent.ogg / se_beat_accent.mp3 | self-synthesized（拍の効果音・4拍目の強い音） | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | se_bubble_01.ogg / se_bubble_01.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | se_bubble_02.ogg / se_bubble_02.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | se_bubble_03.ogg / se_bubble_03.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
@@ -38,5 +40,3 @@ License for the audio: CC0 1.0. Author: ソナ / VERDANT//ZERO team.
 - Style: general traits only (impressionist extended harmony, modal, odd meters, layered strings + piano, ethnic-style formant voices), per the creative policy in D-2026-10-21. No existing melody is quoted or imitated; all melodies and progressions are original.
 - Instruments: strings = detuned band-limited saw ensemble with vibrato; piano = additive inharmonic partials + hammer noise; reverb = synthesized stereo IR (circular convolution for seamless loops).
 - vo_uta_awa_no_inori: lyrics by フェザリオ (/workspace/novel/verdant-zero/lyrics-awa-no-inori.md v1), project-owned text. Lines are repeated but none were added. Singing = own Japanese mora formant synthesis (hiragana → consonant noise/burst/nasal + a/i/u/e/o formants, f0 glide + vibrato). The interlude hum is wordless. The audio is CC0; the lyric text stays project-owned.
-| se_beat.ogg / .mp3 | 自作合成（Python/NumPy、FFmpegで書き出し）。拍の効果音（1〜3拍目） | CC0 1.0 | ソナ |
-| se_beat_accent.ogg / .mp3 | 自作合成（同上）。拍の4拍目用の強い音 | CC0 1.0 | ソナ |
