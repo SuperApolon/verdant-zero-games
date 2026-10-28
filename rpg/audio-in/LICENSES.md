@@ -15,6 +15,7 @@ License for the audio: CC0 1.0. Author: ソナ / VERDANT//ZERO team.
 | bgm_depth03_twilight.ogg / bgm_depth03_twilight.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | bgm_depth04_sunken_city.ogg / bgm_depth04_sunken_city.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | bgm_depth05_abyss.ogg / bgm_depth05_abyss.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
+| bgm_last_theme.ogg / bgm_last_theme.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | se_attack_magic.ogg / se_attack_magic.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | se_attack_slash.ogg / se_attack_slash.mp3 | self-synthesized | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |
 | se_beat.ogg / se_beat.mp3 | self-synthesized（拍の効果音・1〜3拍目） | Python/NumPy + FFmpeg | CC0 1.0 | ソナ |

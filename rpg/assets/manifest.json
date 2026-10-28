@@ -81,6 +81,10 @@
    "audio-in/vo_uta_awa_no_inori.ogg",
    "audio-in/vo_uta_awa_no_inori.mp3"
   ],
+  "last_theme": [
+   "audio-in/bgm_last_theme.ogg",
+   "audio-in/bgm_last_theme.mp3"
+  ],
   "se_hit": [
    "audio-in/se_hit.ogg",
    "audio-in/se_hit.mp3"

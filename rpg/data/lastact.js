@@ -1,0 +1,1 @@
+window.VZ=window.VZ||{};window.VZ.LASTACT={locked:true,unlockAt:"lastact",items:{k_battle:{label:"〈＿＿〉",battle:"b36",locked:true},k_track:{label:"？？？",audioKey:"last_theme",locked:true},k_none:{label:"？？？",locked:true},k_tag:{label:"【　　】",locked:true},k_name:{label:"？？？",locked:true}},cues:[{id:"cue_end",action:"Audio.cueEnd"}]};
